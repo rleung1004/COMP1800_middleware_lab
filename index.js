@@ -67,4 +67,14 @@ app.post("/getUserById", (req, res) => {
 })
 
 
+
+app.get("/lab", (req, res) => {
+  axios.get("https://sheet.best/api/sheets/50f73742-f5db-4741-aa50-2f1981e49fcd").then((data) => {
+    res.render("pages/index.ejs", {drinks: data.data}); // render(directory of the ejs html you want to use, an object list identifying which variable should be using which data)
+    }).catch(function(error) {
+      res.json("Error occured!");
+    })
+})
+
+
 app.listen(3000, () => console.log('app listening on port 3000!'));

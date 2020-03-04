@@ -12,12 +12,12 @@
 	<main>
 		<div class="jumbotron">
 			<h1>Cafe BCIT</h1>
-			<p><%= tagline %></p>
+			<p></p>
         </div>
         
         <ul>
             <% drinks.forEach(function(drink) { %>
-                <li><%= drink.name %> - <%= drink.sweetness %></li>
+                <li><%= drink.title %> - <%= drink.date %> - <%= drink.notes %> - <%= drink.tags %></li>
             <%}); %>
         </ul>
 	</main>
