@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+</head>
+<body class="container">
+
+	<header>
+        <%- include ('../partials/header') %>
+	</header>
+
+	<main>
+		<div class="jumbotron">
+			<h1>Cafe BCIT</h1>
+			<p><%= tagline %></p>
+        </div>
+        
+        <ul>
+            <% drinks.forEach(function(drink) { %>
+                <li><%= drink.name %> - <%= drink.sweetness %></li>
+            <%}); %>
+        </ul>
+	</main>
+
+	<footer>
+        <%- include ('../partials/footer') %>
+	</footer>
+	
+</body>
+</html>
